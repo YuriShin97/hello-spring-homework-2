@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+div.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 28px;
+    row-gap: 10px;
+}
+
+div.grid > div.btn-group {
+    display: grid;
+    grid-column: 1/-1;
+}
+
+div.grid div.right-align {
+    text-align: right;
+}
+
+label {
+    padding-left: 10px;
+}
+
+button,
+input,
+textarea {
+    padding: 10px;
+}
+
+input[type=text],
+input[type=date]{
+    width: 100%;
+    border: none;
+    text-align: center;
+}
+
+input[type=button]{
+    background-color: black;
+    color: white;
+}
+
+table.table {
+    width: auto;
+    border-collapse: collapse;
+    border: 1px solid #000;
+}
+
+table.table > thead > tr {
+    width: auto;
+    background-color: #fff;
+    text-align: center;
+}
+
+table.table > thead th {
+    width: 30px;
+    padding: 10px;
+    color: #333;
+}
+
+table.table th,
+table.table td {
+    border: 1px solid #000;
+}
+
+table.table > tbody tr {
+    width: 30px;
+    background-color: #ffffff;
+}
+
+table.table > tbody tr:nth-child(3) {
+    width: 150px;
+    background-color: #ffffff;
+}
+
+table.table > tbody tr:nth-child(4) {
+    width: 90px;
+    background-color: #ffffff;
+}
+
+table.table > tbody td {
+    padding: 10px;
+    color: #333;
+}
+
+

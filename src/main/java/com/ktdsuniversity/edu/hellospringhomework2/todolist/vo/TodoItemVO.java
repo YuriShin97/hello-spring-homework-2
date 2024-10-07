@@ -1,9 +1,16 @@
 package com.ktdsuniversity.edu.hellospringhomework2.todolist.vo;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class TodoItemVO {
     private int id;
+
+    @NotBlank
     private boolean isDone;
+
+    @NotBlank
     private String todoSubject;
+    @NotBlank
     private String deadline;
 
     public int getId() {

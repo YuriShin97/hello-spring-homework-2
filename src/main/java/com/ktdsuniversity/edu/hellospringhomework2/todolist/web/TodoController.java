@@ -3,8 +3,10 @@ package com.ktdsuniversity.edu.hellospringhomework2.todolist.web;
 import com.ktdsuniversity.edu.hellospringhomework2.todolist.service.TodoService;
 import com.ktdsuniversity.edu.hellospringhomework2.todolist.vo.TodoItemListVO;
 import com.ktdsuniversity.edu.hellospringhomework2.todolist.vo.WriteTodoItemVO;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -36,7 +38,14 @@ public class TodoController {
 
     // 새로운 TodoItem 를 요청하는 화면에 대한 핸들러
     @PostMapping("/todo/write")
-    public String doCreateNewTodo(WriteTodoItemVO writeTodoItemVO, Model model) {
+    public String doCreateNewTodo(@Valid WriteTodoItemVO writeTodoItemVO
+                                 , BindingResult bindingResult
+                                 , Model model) {
+
+        if(bindingResult.hasErrors()) {
+            model.addAttribute("todoItemListVO", writeTodoItemVO);
+            return "todo/todoWrite";
+        }
 
         boolean isCreate = this.todoService.createNewTodo(writeTodoItemVO);
 

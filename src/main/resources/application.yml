@@ -6,10 +6,10 @@ spring:
     driver-class-name: oracle.jdbc.driver.OracleDriver
     username: SPRING_HOMEWORK
     password: 1234
-  mvc:
-    view:
-      prefix: /WEB-INF/views/
-      suffix: .jsp
+#  mvc:
+#    view:
+#      prefix: /WEB-INF/views/
+#      suffix: .jsp
 
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml

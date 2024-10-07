@@ -16,6 +16,24 @@ div.grid div.right-align {
     text-align: right;
 }
 
+div.grid2 {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: 28px 28px 1fr;
+    row-gap: 10px;
+}
+
+div.grid2 > div.btn-group {
+    display: grid;
+    grid-column: 1/3;
+}
+
+div.grid2 div.right-align {
+    text-align: right;
+}
+
+
+
 label {
     padding-left: 10px;
 }
@@ -26,7 +44,18 @@ textarea {
     padding: 10px;
 }
 
-input[type=text],
+#todoSubject{
+    width: 100%;
+    border: none;
+    text-align: center;
+}
+
+div.grid > input[type=text]{
+    width: 100%;
+    border: none;
+    text-align: center;
+}
+
 input[type=date]{
     width: 100%;
     border: none;
@@ -36,6 +65,17 @@ input[type=date]{
 input[type=button]{
     background-color: black;
     color: white;
+}
+
+#button{
+    background-color: black;
+    color: white;
+}
+
+button2,
+input2 {
+    padding: 10px;
+    border: 1px solid #ccc;
 }
 
 table.table {
@@ -81,4 +121,38 @@ table.table > tbody td {
     color: #333;
 }
 
+div.error {
+    font-size: 0.8rem;
+    color: #a00;
+}
 
+div.errors{
+    background-color: #ff00004a;
+    opacity: 0.8;
+    padding: 10px;
+    color: #333;
+}
+
+div.errors:last-child{
+    margin-bottom: 15px;
+}
+
+div.grid3 > .error {
+    background-color: #ff00004a;
+    opacity: 0.8;
+    padding: 10px;
+    color: #333;
+}
+
+div.grid3 > .error:last-child {
+    margin-bottom: 15px;
+}
+
+.available{
+    background-color: #0f08;
+}
+
+.unusable{
+    background-color: #a008;
+
+}

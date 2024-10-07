@@ -8,8 +8,9 @@
 
 .grid {
     display: grid;
-    grid-template-columns: 0.3fr 0.7fr;
-    grid-template-rows: 0.2fr 0.4fr;
+    grid-template-columns: 0.2fr 0.8fr;
+    grid-template-rows: 0.2fr 0.8fr;
+    text-align: center;
 }
 
 .grid > label {
@@ -26,23 +27,27 @@ label {
     border-left: 1px solid #333;
     border-right: 1px solid #333;
     padding: 10px;
+    vertical-align: center;
 }
 
 label:first-child {
     border-top: 1px solid #333;
 }
 
-#subject {
+#todoSubject {
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
     border-right: 1px solid #333;
     padding: 10px;
+    text-align: center;
 }
 
 #deadline {
     border-bottom: 1px solid #333;
     border-right: 1px solid #333;
     padding: 10px;
+    vertical-align: center;
+    text-align: center;
 }
 
 input {
@@ -76,4 +81,22 @@ button {
     padding: 10px 20px;
     background-color: #000;
     color: #fff;
+}
+
+#button {
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+div.errors{
+    background-color: #ff00004a;
+    opacity: 0.8;
+    padding: 10px;
+    color: #333;
+}
+
+div.errors:last-child{
+    margin-bottom: 15px;
 }
